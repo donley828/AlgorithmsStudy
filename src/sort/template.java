@@ -3,39 +3,32 @@ package sort;
 import edu.princeton.cs.algs4.StdDraw;
 
 public class template {
-	public static void sort(Comparable<Integer> a) {
 
+	public static boolean less(double v, double w) {
+		return v < w;
 	}
 
-	private static boolean less(Comparable<Integer> v, Comparable<Integer> w) {
-		return v.compareTo((Integer) w) < 0;
-	}
-
-	private static void exch(Comparable<Integer>[] a, int i, int j) {
-		Comparable<Integer> t = a[i];
+	public static void exch(double[] a, int i, int j) {
+		double t = a[i];
 		a[i] = a[j];
 		a[j] = t;
 	}
 
-	private static void show(Comparable<Integer>[] a) {
+	public static void show(double[] a) {
 		for (int i = 0; i < a.length; i++) {
 			System.out.print(a[i] + " ");
 		}
 		System.out.println();
 	}
 
-	public static boolean isSorted(Comparable<Integer>[] a) {
+	public static boolean isSorted(double[] a) {
 		for (int i = 0; i < a.length; i++)
 			if (less(a[i], a[i - 1]))
 				return false;
 		return true;
 	}
 
-	public static void main(String[] args) {
-		int[] a = null;
-	}
-
-	private static void Draw(int[] a) {
+	public static void Draw(double[] a) {
 		int N = a.length;
 		for (int i = 0; i < N; i++) {
 			double x = 1.0 * i / N;
@@ -46,4 +39,5 @@ public class template {
 		}
 		StdDraw.enableDoubleBuffering();
 	}
+
 }
