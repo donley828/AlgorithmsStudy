@@ -5,7 +5,7 @@ import edu.princeton.cs.algs4.StdDraw;
 public class template {
 
 	public static boolean less(double v, double w) {
-		return v < w;
+		return (v - w) < 0;
 	}
 
 	public static void exch(double[] a, int i, int j) {

@@ -17,7 +17,7 @@ public class Selection extends template {
 					min = j;
 			exch(a, i, min);
 			Draw(a);
-			StdDraw.show(1000);
+			StdDraw.show(100);
 			StdDraw.clear();
 		}
 	}
@@ -41,10 +41,12 @@ public class Selection extends template {
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		// double[] a = { 8, 5, 6, 2, 1, 5, 8 };
-		int N = 10;
+		int N = 500;
 		double[] a = new double[N];
 		for (int i = 0; i < N; i++)
 			a[i] = StdRandom.random();
+		show(a);
 		sort(a);
+		show(a);
 	}
 }
