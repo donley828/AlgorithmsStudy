@@ -35,6 +35,7 @@ public class Stack<Item> {
 		return item;
 	}
 
+	// TODO iterator
 	public static void main(String[] args) {
 		Stack<String> s = new Stack<String>();
 		s.push("test");
